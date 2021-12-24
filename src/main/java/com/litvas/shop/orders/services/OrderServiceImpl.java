@@ -21,6 +21,7 @@ public class OrderServiceImpl implements OrderService {
         return orderRepository.save(order);
     }
 
+    @Transactional
     public void deleteOrder(String code) {
         orderRepository.deleteByCode(code);
     }
