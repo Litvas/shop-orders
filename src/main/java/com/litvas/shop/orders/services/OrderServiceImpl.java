@@ -16,6 +16,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Order addOrder(Order order) {
+        order.getEntries().forEach(entry -> entry.setOrder(order));
         order.setCode(hashGenerator.generate());
         return orderRepository.save(order);
     }
