@@ -23,11 +23,6 @@ public class Order {
 
     private String code;
 
-    @Enumerated(EnumType.STRING)
-    private DeliveryType deliveryType;
-
-    private String deliveryAddress;
-
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<OrderEntry> entries;
 
