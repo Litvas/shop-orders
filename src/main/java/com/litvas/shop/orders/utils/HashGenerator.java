@@ -2,6 +2,6 @@ package com.litvas.shop.orders.utils;
 
 public interface HashGenerator {
 
-    String generate2();
+    String generate();
 
 }
